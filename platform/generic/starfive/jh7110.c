@@ -277,7 +277,7 @@ static int starfive_jh7110_final_init(bool cold_boot,
 	void *fdt = fdt_get_address();
 
 	if (cold_boot) {
-		fdt_reset_driver_init(fdt, &fdt_reset_pmic);
+		fdt_reset_driver_init(fdt, &fdt_reset_pmic, false);
 		return starfive_jh7110_inst_init(fdt);
 	}
 

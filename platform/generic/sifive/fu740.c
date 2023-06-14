@@ -233,7 +233,7 @@ static int sifive_fu740_final_init(bool cold_boot,
 	void *fdt = fdt_get_address();
 
 	if (cold_boot) {
-		rc = fdt_reset_driver_init(fdt, &fdt_reset_da9063);
+		rc = fdt_reset_driver_init(fdt, &fdt_reset_da9063, false);
 		if (rc)
 			sbi_printf("%s: failed to find da9063 for reset\n",
 				   __func__);
