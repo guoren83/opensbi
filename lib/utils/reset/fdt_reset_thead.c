@@ -130,5 +130,5 @@ static const struct fdt_match thead_reset_match[] = {
 
 struct fdt_reset fdt_reset_thead = {
 	.match_table = thead_reset_match,
-	.init = thead_reset_init
+	.early_init = thead_reset_init
 };
